@@ -2,30 +2,21 @@
 
 You should now be able to create sealed secrets.
 
+## Reference
+* [Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets)
+
 ## Install the client-side tool (kubeseal) and Sealed Secrets:
-### Makefile
-- Client-side
+### Makefile 
+
 ```
-make install
-```
-- Sealed Secrets
-```
-make download
-```
-### OR
-- Client-side
-```
-	wget https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.18.4/kubeseal-0.18.4-linux-amd64.tar.gz
-	tar -xvzf kubeseal-0.18.4-linux-amd64.tar.gz kubeseal
-	sudo install -m 755 kubeseal /usr/local/bin/kubeseal
-	rm -rf kubeseal-0.18.4-linux-amd64.tar.gz kubeseal
-	kubeseal --version
-```
-- Sealed Secrets
-```
-	helm repo add sealed-secrets https://bitnami-labs.github.io/sealed-secrets
-	helm repo update
-	helm install sealed-secrets --set-string fullnameOverride=sealed-secrets-controller sealed-secrets/sealed-secrets --namespace kube-system
+❯ make help 
+
+ ------------------------------------
+ Sealed Secrets
+ ------------------------------------
+ make kubeseal
+ make install 
+ make delete
 ```
 
 ## Create a sealed secret file running the command below:
