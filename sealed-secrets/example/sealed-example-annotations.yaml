@@ -1,0 +1,28 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "example-annotations",
+    "namespace": "default",
+    "creationTimestamp": null,
+    "annotations": {
+      "sealedsecrets.bitnami.com/namespace-wide": "true"
+    }
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "example-annotations",
+        "namespace": "default",
+        "creationTimestamp": null,
+        "annotations": {
+          "sealedsecrets.bitnami.com/namespace-wide": "true"
+        }
+      },
+      "type": "Opaque"
+    },
+    "encryptedData": {
+      "secret": "AgAY1jaDDb18d+/BijnV4ezEn/CES5MA23yvt6lVgv9rf0mg5LuQJlwDSlBwFqJxKmMV+r088gi7uyOezJCIzqG/GWcSeNCwTGI2o+8466wKysSVimJtkJHxWklvTSAvZ4RF32Fg7lz+fd82w2j8OR8mevzLs3SqyPIIXIeVBKZXA77tiMDQDG3FmGJ28ewgh5/xIEddC5TolFv34AOJIHaUZe8jmxRjt8Cx5H8kIIRTJUpBeEIR7eUDRNcDOE02++4/iwRpSNKkfKgl2dUdodZuUe6NY1oXK0pSzwOI3+cXSbsJCyTgsOIhAMHCO9WIrtDOTNBs2SB3sQk4IvP+NKqnZTR/JQx6Nvq3xpnNB7grWIM/HhCmqcM/5m7KF7+aURBDJJUc9Z+vO4mgJJsOYjNuG+DC7r8Jr+XD12HsCuZf17pYP/BqnxmXsjwny8JhECUrGMxuuh5Uks5Lpss4epmcO6BPcow5ETNdI66I+FNMsZfq1hf1NEBoQsio7awbWvLUAQnFbpZCukJivRBufXe7eMtr8jk4nTp6gkTXSSYVGMHzC23bjeY1omB4OHYWWzOLCO6mHCapuQz4A1YT+AO0r8t8LCVK+T/6t12uXNyAzYE6zE7SBde5j9c6UDmMoLS/qMl4tRmLHBoJLVZaEHj48HxfWCUvBmCM8wGFycrWbHaaZg9WnS2Dchvv257eWC/ag2r6JaH9Apri"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  echo: aGVsbG8gd29ybGQ=
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: echo
+  namespace: default

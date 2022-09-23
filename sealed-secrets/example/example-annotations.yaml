@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: example-annotations
+    namespace: default
+    annotations:
+        sealedsecrets.bitnami.com/namespace-wide: "true"
+type: Opaque
+data:
+    secret: bXkgc2VjcmV0Cg==
