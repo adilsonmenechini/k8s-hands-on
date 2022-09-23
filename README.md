@@ -7,11 +7,11 @@
 
 
 ## MakeFile
-
-> make help 
 ```
- Make install - Download k3d
- Make cluster - Create cluster k3d, with the example k3d.yaml
- Make disable-traefik: - Create cluster k3d, with the example k3d.yaml whitout traefik
- Make disable-traefik: - Delete cluster k3d
+> make help 
+
+ make k3d - Download k3d
+ make cluster - Create cluster k3d, with the example k3d.yaml
+ make disable-traefik: - Create cluster k3d, with the example k3d.yaml without traefik
+ make clean: - Delete cluster k3d
 ```

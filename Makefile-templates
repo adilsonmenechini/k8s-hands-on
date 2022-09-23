@@ -1,0 +1,8 @@
+.PHONY: install delete
+
+## make install 
+install:
+	kubectl kustomize ./base --enable-helm  | kubectl apply -f -
+## make delete
+delete:
+	kubectl kustomize ./base --enable-helm  | kubectl delete -f -
