@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: vault
 resources:
   - namespace.yaml
-  # - rba.yaml
 helmCharts:
 - name: vault
   releaseName: vault
