@@ -22,5 +22,5 @@ disable-traefik:
 ## make clean - Delete cluster k3d
 clean:
 	curl https://raw.githubusercontent.com/adilsonmenechini/k8s-hands-on/main/k3d.yaml | k3d cluster delete --config -
-	docker rmi $(docker images -q)
+	docker rmi $$(docker images -q)
 	find ./ -name charts -exec rm -rf {} \;
