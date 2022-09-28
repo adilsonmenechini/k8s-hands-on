@@ -5,6 +5,7 @@
 ## TODO
 * [Sealed Secrets](sealed-secrets/README.md)
 * [Prometheus](prometheus/README.md)
+* [Vault](vault/README.md)
 
 ## MakeFile
 ```

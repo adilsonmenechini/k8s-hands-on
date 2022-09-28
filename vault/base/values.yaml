@@ -50,6 +50,7 @@ config:
 ha:
   enabled: true
   replicas: 2
+  
 externalConfig:
   policies:
     - name: allow_secrets
