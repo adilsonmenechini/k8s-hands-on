@@ -2,7 +2,7 @@
 
 sealed-version=0.18.4
 
-include ../Makefile-templates
+include ../Makefile-templates.mk
 include ../Makefile
 
 ## ------------------------------------

@@ -1,9 +1,11 @@
-.PHONY: install delete
+.PHONY: creater
+
+
 
 include ../Makefile-templates.mk
 include ../Makefile
 
 ## ------------------------------------
-## Prometheus
+## #name#
 ## ------------------------------------
 

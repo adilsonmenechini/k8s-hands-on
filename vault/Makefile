@@ -1,6 +1,6 @@
 .PHONY: install delete
 
-include ../Makefile-templates
+include ../Makefile-templates.mk
 include ../Makefile
 
 ## ------------------------------------

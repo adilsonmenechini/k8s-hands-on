@@ -15,7 +15,9 @@ You should now be able to create Vault.
  Vault
  ------------------------------------
  make vault - Client Vault
- make install 
+ make install
+   - debug=false|true
+     ex: make install debug=true
  make delete
 ```
 

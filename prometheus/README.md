@@ -14,7 +14,9 @@ You should now be able to create Prometheus.
  ------------------------------------
  Prometheus
  ------------------------------------
- make install 
+ make install
+   - debug=false|true
+     ex: make install debug=true
  make delete
 ```
 

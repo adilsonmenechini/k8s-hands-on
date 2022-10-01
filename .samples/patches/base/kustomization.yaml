@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+# resources:
+#   - hpa.yaml
+
+# helmCharts:
+# - name: #name# 
+#   releaseName: #name#
+#   version: 15.13.0
+#   repo: https://#name#
+#   includeCRDs: true
+#   valuesFile: values.yaml
