@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: istio-example
+  labels:
+    app.kubernetes.io/component: istio-example
+    kubernetes.io/metadata.name: istio-example
+    #istio-injection: enabled

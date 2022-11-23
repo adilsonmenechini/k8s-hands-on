@@ -1,0 +1,53 @@
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: nginx-helm-hpa
+  labels:
+    helm.sh/chart: helm-0.1.0
+    app.kubernetes.io/name: helm
+    app.kubernetes.io/instance: nginx
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nginx-helm
+  minReplicas: 1
+  maxReplicas: 3
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 70
+      policies:
+        - type: Percent
+          value: 20
+          periodSeconds: 10
+    scaleUp:
+      stabilizationWindowSeconds: 20
+      policies:
+        - type: Percent
+          value: 20
+          periodSeconds: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 90
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 90
+  # - type: External
+  #   external:
+  #     metric:
+  #       name: timeshift(sum:azure.servicebus_namespaces.incoming_messages{name:example-sbus-prod-brazilsouth,entityname:promax_example} by {entityname}.as_count(), -300)
+  #       selector:
+  #         matchLabels:
+  #           app: teste
+  #     target:
+  #       type: AverageValue
+  #       averageValue: 1000

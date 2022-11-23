@@ -23,6 +23,8 @@ kustomize:
 k3d:kustomize
 	@if [ -z ${k3d} ]; then wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash; fi;
 
+## !? checks or installs if you do not have k3d and kustomize
+##
 ## make cluster - Create cluster k3d, with the example k3d.yaml
 cluster:k3d
 	curl https://raw.githubusercontent.com/adilsonmenechini/k8s-hands-on/main/k3d.yaml | k3d cluster create --config -
