@@ -21,7 +21,7 @@ options:
     wait: true
   k3s:
     extraArgs:
-      - arg: --cluster-domain=handson.localhost
+      - arg: --cluster-domain=labs.handson.local
         nodeFilters:
           - server:*
       - arg: --node-taint=node-role.kubernetes.io/master=:NoSchedule
